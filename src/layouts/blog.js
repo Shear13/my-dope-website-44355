@@ -16,17 +16,17 @@ export default class Blog extends React.Component {
                   {_.map(display_posts, (post, post_idx) => (
                   <article key={post_idx} className="post post-card">
                     <div className="post-card-inside">
-                      {_.get(post, 'frontmatter.thumb_image', null) && (
+                      {_.get(post, 'thumb_image', null) && (
                       <Link className="post-card-thumbnail" href={withPrefix(_.get(post, '__metadata.urlPath', null))}>
-                        <img className="thumbnail" src={withPrefix(_.get(post, 'frontmatter.thumb_image', null))} alt={_.get(post, 'frontmatter.title', null)} />
+                        <img className="thumbnail" src={withPrefix(_.get(post, 'thumb_image', null))} alt={_.get(post, 'title', null)} />
                       </Link>
                       )}
                       <div className="post-card-content">
                         <header className="post-header">
-                          <h2 className="post-title"><Link href={withPrefix(_.get(post, '__metadata.urlPath', null))} rel="bookmark">{_.get(post, 'frontmatter.title', null)}</Link></h2>
+                          <h2 className="post-title"><Link href={withPrefix(_.get(post, '__metadata.urlPath', null))} rel="bookmark">{_.get(post, 'title', null)}</Link></h2>
                         </header>
                         <div className="post-excerpt">
-                          <p>{_.get(post, 'frontmatter.excerpt', null)}</p>
+                          <p>{_.get(post, 'excerpt', null)}</p>
                         </div>
                         <BlogPostFooter {...this.props} page={post} date_type={'short'} />
                       </div>
