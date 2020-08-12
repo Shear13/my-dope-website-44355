@@ -1,7 +1,7 @@
 {
     "title": "Stackbit Azimuth Theme",
     "path_prefix": "/",
-    "palette": "purple",
+    "palette": "orange",
     "header": {
         "title": "Not Azimuth",
         "logo_img": "images/logo.png",
